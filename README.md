@@ -1,4 +1,4 @@
 
-# "¡Heee! ¿Qué pasa, chavales? Todo bien, todo correcto… ¡y yo que me alegro!" # 👍
+# APLICACIÓN WEB PARA SALON DE UÑAS # 
 
-https://th.bing.com/th/id/R.60d0e78516604838a98e5c79f36826f5?rik=miUNvypD%2f%2fJZCA&pid=ImgRaw&r=0
+Aplicación web para el registro de citas en un salon de uñas.
