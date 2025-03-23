@@ -4,35 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pink Moon</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="Media/Start.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
     <!-- ENCABEZADO Y NAVEGACION -->
-    <header>
-        <div class="logo">
-            <img src="Media/Inicio/LogoPM.png" alt="Logo Pink Moon">
-            <h1>Pink <br>Moon</h1>
-        </div>
-        <div class="ContenedorMenu">
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#precios">Precios</a></li>
-                    <li><a href="#reserva   ">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="redes-sociales">
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
+    <header class="navbar navbar-expand-lg custom-navbar fixed-top">
+        <div class="container-fluid">
+            
+            <a class="navbar-brand d-flex align-items-center logo" href="#">
+                <img src="Media/Inicio/LogoPM.png" alt="Logo Pink Moon">
+                <h1>Pink <br>Moon</h1>
+            </a>
+    
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            
+            <div class="collapse navbar-collapse justify-content-center ContenedorMenu" id="navbarNav">
+                <nav>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#precios">Precios</a></li>
+                        <li><a href="#reserva">Contacto</a></li>
+                    </ul>
+                </nav>
+    
+                
+                <div class="redes-sociales d-lg-none text-center">
+                    <a href="https://wa.me/tu_numero" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/tu_pagina" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a href="https://www.instagram.com/tu_perfil" target="_blank"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+    
+        
+            <div class="redes-sociales d-none d-lg-flex">
+                <a href="https://wa.me/tu_numero" target="_blank"><i class="bi bi-whatsapp"></i></a>
+                <a href="https://www.facebook.com/tu_pagina" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/tu_perfil" target="_blank"><i class="bi bi-instagram"></i></a>
+            </div>
         </div>
     </header>
     <!-- ENCABEZADO Y NAVEGACION -->
+
+
     <!-- SECCION PRINCIPAL -->
     <section id="inicio" class="EstilosGenerales ClaseInicio">
         <div class="ContenidoGeneral">
@@ -42,6 +65,8 @@
         </div>
     </section>
     <!-- SECCION PRINCIPAL -->
+
+
     <!-- SECCION EJEMPLOS -->
     <section id="ejemplos" class="claseEjemplos">
         <h2>Ejemplos</h2>
@@ -61,6 +86,8 @@
         </div>
     </section>    
     <!-- SECCION EJEMPLOS -->
+
+
     <!-- SECCION NOSOTROS -->
     <section id="nosotros" class="EstilosGenerales ClaseNosotros Centrados">
         <div class="ContenidoGeneral">
@@ -72,6 +99,8 @@
         </div>
     </section>
     <!-- SECCION NOSOTROS -->
+
+
     <!-- SECCION INFORMACION NOSOTROS  -->
     <section id="InformacionNosotros" class="ContenedorInfNosotros">
         <div class="ContenedorSeccionInfNos">
@@ -90,6 +119,8 @@
         </div>
     </section>
     <!-- SECCION INFORMACION NOSOTROS  -->
+
+
     <!-- SECCION CARACTERISTICAS -->
     <section class="ContenedorCaracteristicas">
         <div class="CaracteristicasTexto">
@@ -135,6 +166,8 @@
         </div>
     </section>
     <!-- SECCION CARACTERISTICAS -->
+
+
     <!-- SECCION PRECIOS -->
     <section id="precios" class="EstilosGenerales ClasePrecios Centrados">
         <div class="ContenidoGeneral">
@@ -145,6 +178,8 @@
         </div>
     </section>
     <!-- SECCION PRECIOS -->
+
+    
     <!-- TABLA PRECIOS -->
     <section id="tablaprecios" class="ContenedorPrecios">
         <h2>Precios</h2>
@@ -326,5 +361,6 @@
         <div class="footer-linea"></div>
     </footer>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
