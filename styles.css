@@ -118,6 +118,14 @@ body {
         font-size: 35px;
         padding: 10px;
     }
+
+        .logo img{
+        width: 40px;
+    }
+
+    .logo h1 {
+        font-size: 24px !important;
+    }
 }
 
 
@@ -195,11 +203,26 @@ body {
 }
 /* SECCION INICIO */
 /* SECCION EJEMPLOS */
+/* SECCION EJEMPLOS */
 .claseEjemplos h2 {
     font-family: 'Dancing Script', sans-serif;
     font-size: 90px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
+/* Contenedor de las tarjetas */
+.contenedor-ejemplos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en pantallas pequeñas */
+    justify-content: center;
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px;
+}
+
+/* Tarjetas */
 .ejemplo {
     width: 300px;
     height: 400px;
@@ -219,47 +242,26 @@ body {
     transition: transform 0.6s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-/* Animación de agrandar la tarjeta y rotación al pasar el mouse */
+/* Efecto al pasar el mouse */
 .ejemplo:hover {
     transform: scale(1.1) rotate(-5deg);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-/* Animación en los iconos o imágenes (si se añaden) */
-.ejemplo svg {
-    width: 48px;
-    fill: #333;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
-}
-
-.ejemplo:hover svg {
-    transform: rotate(-45deg);
-    scale: 0;
-}
-
-.contenedor-ejemplos {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px;
-}
-
 /* Fondo de las tarjetas */
 .ejemplo1 {
-    background-image: url('Media/Ejemplos/Ejemplo1.png');
+    background-image: url('Media/Ejemplos/E1.jpg');
 }
 
 .ejemplo2 {
-    background-image: url('Media/Ejemplos/Ejemplo2.jpg');
+    background-image: url('Media/Ejemplos/E2.jpg');
 }
 
 .ejemplo3 {
     background-image: url('Media/Ejemplos/Ejemplo3.png');
 }
 
-/* Efecto de superposición oscura */
+/* Superposición oscura */
 .ejemplo::before {
     content: "";
     position: absolute;
@@ -271,7 +273,7 @@ body {
     z-index: 1;
 }
 
-/* Estilo del texto */
+/* Estilos del texto */
 .ejemplo span {
     font-family: 'Dancing Script', sans-serif;
     font-size: 50px;
@@ -289,7 +291,7 @@ body {
     z-index: 2;
 }
 
-/* Para el contenido dentro de la tarjeta */
+/* Contenido dentro de la tarjeta */
 .card__content {
     position: absolute;
     top: 50%;
@@ -299,28 +301,98 @@ body {
     height: 100%;
     padding: 20px;
     box-sizing: border-box;
-    background-color:white; 
-    /* Ediar color de fondo de la carta*/
+    background-color: white;
     opacity: 0;
     transition: all 2.10s cubic-bezier(0.23, 1, 0.320, 1);
 }
 
-/* Aparece el contenido al pasar el mouse */
+/* Efecto hover */
 .ejemplo:hover .card__content {
     transform: translate(-50%, -50%) rotate(0deg);
     opacity: 1;
 }
 
-
-
 .card__description {
     margin: 15px 0 0;
     font-size: 24px;
-    color:     #f59fd3;
+    color: #f59fd3;
     font-family: 'Caveat';
     line-height: 1.4;
 }
 
+/* ======== RESPONSIVE ======== */
+
+/* Ajustes para tablets */
+@media (max-width: 1024px) {
+    .claseEjemplos h2 {
+        font-size: 70px;
+    }
+
+    .contenedor-ejemplos {
+        gap: 30px;
+    }
+
+    .ejemplo {
+        width: 260px;
+        height: 350px;
+    }
+
+    .ejemplo span {
+        font-size: 40px;
+    }
+
+    .ejemplo p {
+        font-size: 22px;
+    }
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .claseEjemplos h2 {
+        font-size: 50px;
+    }
+
+    .contenedor-ejemplos {
+        flex-direction: column; /* Apilar las tarjetas */
+        align-items: center;
+    }
+
+    .ejemplo {
+        width: 90%; /* Ocupar casi todo el ancho */
+        max-width: 280px;
+        height: 330px;
+    }
+
+    .ejemplo span {
+        font-size: 36px;
+    }
+
+    .ejemplo p {
+        font-size: 20px;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .claseEjemplos h2 {
+        font-size: 40px;
+    }
+
+    .ejemplo {
+        width: 100%;
+        max-width: 260px;
+        height: 300px;
+    }
+
+    .ejemplo span {
+        font-size: 30px;
+    }
+
+    .ejemplo p {
+        font-size: 18px;
+    }
+}
+/* SECCION EJEMPLOS */
 /* SECCION NOSOTROS */
 .ClaseNosotros{
     background: url('Media/Nosotros/FondoNosotros.png') no-repeat center center/cover;
@@ -377,6 +449,17 @@ body {
 }
 /* SECCION INFO NOSOTROS */
 
+
+
+
+
+
+
+
+
+
+
+
 /* SECCION CARACTERISTICAS */
 .ContenedorCaracteristicas {
     padding: 50px 0;
@@ -422,6 +505,7 @@ body {
     text-align: center;
 }
 
+/* Estilo para el icono */
 .Icono {
     width: 80px;
     height: 80px;
@@ -431,6 +515,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación para la escala y sombra */
 }
 
 .Icono img {
@@ -438,6 +523,13 @@ body {
     height: 50px;
 }
 
+/* Efecto de hover para el icono */
+.Icono:hover {
+    transform: scale(1.2); /* Aumenta el tamaño del icono */
+    box-shadow: 0px 0px 15px 2px rgba(255, 102, 178, 0.5); /* Sombra sutil en hover */
+}
+
+/* Estilo para las características */
 .Caracteristica h3 {
     font-size: 1.9rem;
     font-family: 'Dancing Script', sans-serif;
@@ -450,7 +542,76 @@ body {
     color: #FFFFFF;
     line-height: 1.5;
 }
+
 /* SECCION CARACTERISTICAS */
+
+
+/* RESPONSIVE DE SECCION CARACTERISTICAS  */
+/* Ajustes responsive */
+@media (max-width: 1024px) {
+    .CaracteristicasTexto {
+        flex-direction: column; /* Cambia de fila a columna */
+        text-align: center;
+        padding: 0px 40px;
+    }
+
+    .CaracteristicasTexto h2 {
+        font-size: 3rem; /* Reduce tamaño del título */
+    }
+
+    .CaracteristicasTexto p {
+        font-size: 1rem; /* Ajuste del tamaño del párrafo */
+        max-width: 100%;
+    }
+
+    .CaracteristicasGrid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .CaracteristicasGrid {
+        grid-template-columns: repeat(1, 1fr); /* 1 columna en móviles */
+    }
+
+    .Caracteristica {
+        padding: 15px;
+    }
+
+    .CaracteristicasTexto h2 {
+        font-size: 2.5rem; /* Ajusta tamaño para móviles */
+    }
+}
+
+@media (max-width: 480px) {
+    .CaracteristicasTexto h2 {
+        font-size: 2rem;
+    }
+
+    .CaracteristicasTexto p {
+        font-size: 0.9rem;
+    }
+
+    .Icono {
+        width: 60px;
+        height: 60px;
+    }
+
+    .Icono img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .Caracteristica h3 {
+        font-size: 1.5rem;
+    }
+
+    .Caracteristica p {
+        font-size: 0.9rem;
+    }
+}
+/* RESPONSIVE DE SECCION CARACTERISTICAS  */
 
 /* SECCION PRECIOS */
 .ClasePrecios{
@@ -460,6 +621,13 @@ body {
 
 /* SECCIÓN TABLA PRECIOS */
 /* SECCIÓN TABLA DE PRECIOS */
+/* SECCION PRECIOS */
+.ClasePrecios{
+    background: url('Media/Precios/FondoPrecios.png') no-repeat center center/cover;
+}
+/* SECCION PRECIOS */
+
+/* SECCIÓN TABLA PRECIOS */
 .ContenedorPrecios {
     text-align: center;
     padding: 50px 0;
@@ -486,10 +654,16 @@ body {
     background-color: #333333; /* Fondo gris oscuro */
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.1); /* Sombra más sutil */
+    box-shadow: 4px 4px 8px rgba(255, 255, 255, 0.1); /* Sombra más sutil */
     width: 320px;
     text-align: center;
-    border: 2px solid #EF3A98; /* Borde rosa */
+    border: 4px solid #f56fb4be; /* Borde rosa */
+    transition: border-color 0.5s ease, box-shadow 0.5s ease; /* Transición suave en los bordes y sombra */
+}
+
+.TablaPrecios:hover {
+    border-color: #f80099; /* Rosa más brillante al pasar el ratón */
+    box-shadow: 0px 0px 20px 1px rgba(255, 102, 178, 0.5); /* Sombra más intensa en hover */
 }
 
 .TablaPrecios h3 {
@@ -519,6 +693,7 @@ th {
 td {
     color: #FFFFFF; /* Texto en blanco */
 }
+
 /* SECCIÓN TABLA PRECIOS */
 /* SECCION RESERVA */
 .ClaseReserva{
@@ -615,7 +790,7 @@ select option {
 
 /* SECCION UBICACION */
 .ContenedorUbicacion {
-    padding: 40px 0;
+    padding: 40px 20px;
     text-align: center;
 }
 
@@ -625,7 +800,7 @@ select option {
 }
 
 .ContenedorTextoMapa h2 {
-    font-family: 'Dancing Script';
+    font-family: 'Dancing Script', sans-serif;
     font-size: 4rem;
     margin-bottom: 20px;
     color: #EF3A98;
@@ -644,25 +819,56 @@ select option {
 .DireccionPM {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 30px;
     font-size: 1.2em;
     color: #FFFFFF;
     padding: 10px 50px;
-    align-items: center; /* Centra verticalmente el texto */
     text-align: center; 
 }
 
 .DireccionPM p {
-    width: 100%;
     margin: 10px 0;
     padding: 10px 30px;
 }
 /* SECCION UBICACION */
+/* RESPONSIVE DE SECCION UBICACION  */
+@media (max-width: 768px) {
+    .DireccionPM {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .DireccionPM p {
+        padding: 10px;
+    }
+
+    .UbicacionPM iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .ContenedorTextoMapa h2 {
+        font-size: 3rem;
+    }
+
+    .DireccionPM {
+        gap: 10px;
+        font-size: 1em;
+    }
+
+    .UbicacionPM iframe {
+        height: 250px;
+    }
+}
+/* RESPONSIVE DE SECCION UBICACION  */
 
 /* FOOTER */
 .footerPM {
     background-color: #1a1a1a;
-    padding: 10px 0 40px 0;
+    padding: 20px 0;
 }
 
 .ContenedorFooter {
@@ -678,20 +884,19 @@ select option {
 .footer-logo {
     display: flex;
     align-items: center;
-    gap: 20Px;
+    gap: 15Px;
 }
 
 .footer-logo img {
-    width: 70px;
+    width: 60px;
 }
 
 .footer-logo span {
-    font-size: 2em;
+    font-size: 1.8em;
     font-family: 'Scada';
     font-weight: bold;
     color: #EF3A98;
     text-transform: uppercase;
-    line-height: 1.2;
 }
 
 /* Derechos reservados */
@@ -702,14 +907,12 @@ select option {
 /* redes */
 .redesFooter{
     display: flex;
-    gap: 40px;
-    padding: 10px;
+    gap: 30px;
 }
 
 .redesFooter a {
     text-decoration: none;
-    color: #FFFFFF;
-    font-size: 30px;
+    font-size: 25px;
     transition: color 0.3s;
 }
 
@@ -738,6 +941,43 @@ select option {
 }
 
 /* FOOTER */
+/* RESPONSIVE DEL FOOTER */
+/* 📱 MEDIA QUERY PARA RESPONSIVE */
+@media (max-width: 768px) {
+    .ContenedorFooter {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .footer-logo {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-logo img {
+        width: 50px;
+    }
+
+    .footer-logo span {
+        font-size: 1.5em;
+    }
+
+    .redesFooter {
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .redesFooter a {
+        font-size: 22px;
+    }
+
+    .footer-derechos p {
+        font-size: 0.9em;
+    }
+}
+/* RESPONSIVE DEL FOOTER  */
 
 /* AHORITA VEMOS QUE SHOW AQUI */
 /* Secciones generales */
