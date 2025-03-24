@@ -118,6 +118,14 @@ body {
         font-size: 35px;
         padding: 10px;
     }
+
+        .logo img{
+        width: 40px;
+    }
+
+    .logo h1 {
+        font-size: 24px !important;
+    }
 }
 
 
