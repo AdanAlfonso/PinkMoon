@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="icon" href="Media/Start.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/galeria.css">
+    <link rel="stylesheet" href="../Style/navegacion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+   
+</head>
+<body>
+    <header class="navbar navbar-expand-lg custom-navbar fixed-top navbar-visible">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center logo" href="../index.html#inicio">
+            <img src="../Media/Inicio/LogoPM.png" alt="Logo Pink Moon">
+            <h1>Pink <br>Moon</h1>
+          </a>
+    
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse justify-content-center ContenedorMenu" id="navbarNav">
+            <nav>
+              <ul>
+                <li><a href="../index.html#inicio">Inicio</a></li>
+                <li><a href="../index.html#nosotros">Nosotros</a></li>
+                <li><a href="../index.html#precios">Servicios</a></li>
+                <li><a href="../Structure/galeria.html">Galería</a></li>
+                <li><a href="../index.html#reserva">Contacto</a></li>
+                <li><a href="../Structure/login.html">Iniciar sesión</a></li>
+              </ul>
+            </nav>
+    
+            <div class="redes-sociales d-lg-none text-center">
+              <a href="https://wa.me/5219841660855?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank"><i class="bi bi-whatsapp"></i></a>
+              <a href="https://www.facebook.com/profile.php?id=100082310044570&locale=es_LA" target="_blank"><i class="bi bi-facebook"></i></a>
+            </div>
+          </div>
+    
+          <div class="redes-sociales d-none d-lg-flex">
+            <a href="https://wa.me/5219841660855?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=100082310044570&locale=es_LA" target="_blank"><i class="bi bi-facebook"></i></a>
+          </div>
+        </div>
+      </header>
+      
+    
+        <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.querySelector('.custom-navbar');
+    
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+            if (scrollTop > lastScrollTop) {
+                
+                navbar.classList.remove('navbar-visible');
+                navbar.classList.add('navbar-hidden');
+            } else {
+              
+                navbar.classList.remove('navbar-hidden');
+                navbar.classList.add('navbar-visible');
+            }
+    
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+        });
+    </script>
+    
+</body>
+</html>
