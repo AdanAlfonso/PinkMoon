@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería</title>
+    <link rel="icon" href="../Media/Start.png">
+    <link rel="stylesheet" href="../Style/style.css">
+    <link rel="stylesheet" href="../Style/galeria.css">
+    <link rel="stylesheet" href="../Style/navegacion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR DINÁMICO -->
+    <div id="navbar-container"></div>
+
+    <h1 class="main-title">Galería de Imágenes</h1>
+
+    
+    <div class="gallery-container">
+        <!-- Botón Anterior -->
+        <button class="button-3d" id="boton-anterior">
+            <div class="button-top">
+                <span class="material-icons">❮</span>
+            </div>
+            <div class="button-bottom"></div>
+            <div class="button-base"></div>
+        </button>
+
+        <div class="gallery" id="gallery"></div>
+
+        <!-- Botón Siguiente -->
+        <button class="button-3d" id="boton-siguiente">
+            <div class="button-top">
+                <span class="material-icons">❯</span>
+            </div>
+            <div class="button-bottom"></div>
+            <div class="button-base"></div>
+        </button>
+    </div>
+
+    <!-- UBICACIÓN -->
+    <section id="ubicacion" class="ContenedorUbicacion">
+        <div class="ContenedorTextoMapa">
+            <h2>Ubicación</h2>
+            <div class="DireccionPM">
+                <p>Av. CTM 13-01, Villas del Sol, 77723 Solitude, Q.R.</p>
+                <p>Teléfono: +52 9841660855</p>
+                <p>Horario: Lunes a Viernes <br>09:00 Am - 05:00 Pm</p>
+            </div>
+            <div class="UbicacionPM">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.9764306187344!2d-87.1138339335077!3d20.67053787035851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f4e433d4950caad%3A0x99f05fe58e7a2c9d!2sPINK%20MOON!5e0!3m2!1ses-419!2smx!4v1741549372752!5m2!1ses-419!2smx"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footerPM">
+        <div class="ContenedorFooter">
+            
+            <div class="footer-logo">
+                <img src="../Media/Inicio/LogoPM.png" alt="Pink Moon">
+                <span>PINK<br>MOON</span>
+            </div>
+
+        
+            <div class="footer-derechos">
+                <p>© 2025 Pink Moon. Todos los derechos reservados.</p>
+            </div>
+
+           
+            <div class="redesFooter">
+                <a href="#"><i class="fab fa-whatsapp WhatsappColor"></i></a>
+                <a href="#"><i class="fab fa-facebook FacebookColor"></i></a>
+                <a href="#"><i class="fab fa-instagram InstagramColor"></i></a>
+            </div>
+        </div>
+
+        <!-- Línea divisoria -->
+        <div class="footer-linea"></div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="../Style/galeria.js"></script>
+    <script>
+        fetch('../Style/nabvar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .then(() => {
+                const navbar = document.querySelector('.navbar');
+                if (navbar) {
+                    const navbarHeight = navbar.offsetHeight;
+                    document.body.style.marginTop = `${navbarHeight}px`;
+                }
+            });
+    </script>
+    <script>
+        fetch('../Style/nabvar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+            })
+            .then(() => {
+                const navbar = document.querySelector('.navbar');
+                if (navbar) {
+                    const navbarHeight = navbar.offsetHeight;
+                    document.body.style.marginTop = `${navbarHeight}px`;
+    
+                    let lastScrollTop = 0;
+                    window.addEventListener('scroll', function () {
+                        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                        if (scrollTop > lastScrollTop) {
+                            // Scroll hacia abajo: ocultar navbar
+                            navbar.style.top = `-${navbarHeight}px`;
+                        } else {
+                            // Scroll hacia arriba: mostrar navbar
+                            navbar.style.top = '0';
+                        }
+                        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Evita negativos
+                    });
+                }
+            });
+    </script>
+    
+
+</body>
+</html>

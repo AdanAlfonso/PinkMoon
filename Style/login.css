@@ -1,0 +1,184 @@
+/* Importar fuente */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Scada:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Scada', sans-serif;
+    background-color: #111;
+    color: white;
+}
+
+.ClaseLogin {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.ClaseImagen {
+    position: relative;
+    background-image: url('../Media/Login.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 100vh;
+}
+
+.ClaseImagen::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.ClaseEnlacesEspeciales {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.ClaseEnlacesEspeciales a {
+    font-size: 14px;
+    color: #E1308C;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.ClaseEnlacesEspeciales a:hover {
+    color: #ae246c; 
+}
+
+.CrearCuenta {
+    font-style: italic;
+}
+
+
+/* LADO DERECHO */
+.ClaseFormulario {
+    flex: 1;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    box-shadow: -10px 0 20px rgba(239, 58, 152, 0.2);
+}
+
+.ClaseFormulario h2 {
+    font-size: 3rem;
+    font-family: 'Dancing Script';
+    color: #E1308C;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.subtitulo {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-size: 1em;
+    color: #fff;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-size: 1em;
+    font-family: 'Montserrat';
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+.olvide {
+    font-size: 0.9em;
+    color: #EF3A98;
+    text-decoration: none;
+    margin-top: -10px;
+}
+
+.olvide:hover {
+    text-decoration: underline;
+}
+
+button {
+    padding: 12px;
+    background-color: #E1308C;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #ae246c;
+}
+
+@media (max-width: 768px) {
+    .ClaseLogin {
+        flex-direction: column;
+    }
+
+    .ClaseImagen {
+        height: 250px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .ClaseFormulario {
+        width: 100%;
+        padding: 2rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ClaseFormulario h2 {
+        font-size: 1.8rem;
+    }
+
+    .ClaseFormulario p {
+        font-size: 1rem;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .btn-login {
+        width: 100%;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Registro</title>
+    <link rel="icon" href="../Media/Start.png">
+    <link rel="stylesheet" href="../Style/registro.css">
+</head>
+<body>
+    <div class="ClaseFormulario">
+        <h1>Crear Cuenta</h1>
+        <p>Regístrate para poder reservar tus citas</p>
+
+        <form action="#" method="post">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required />
+
+            <label for="apellidos">Apellidos</label>
+            <input type="text" id="apellidos" name="apellidos" required />
+
+            <label for="edad">Edad</label>
+            <input type="number" id="edad" name="edad" required />
+
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" required />
+
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required />
+
+            <label for="contrasena">Contraseña</label>
+            <input type="password" id="contrasena" name="contrasena" required />
+
+            <div class="ClaseEnlaceLogin">
+                <a href="login.html">¿Ya tienes cuenta? Inicia sesión</a>
+            </div>
+
+            <button type="submit" class="BtnRegistrarse" id="BotonRegistro">Registrarse</button>
+        </form>
+    </div>
+
+    <div class="ClaseImagen"></div>
+    <script src="../Logic/validacionRegistro.js"></script>
+</body>
+</html>
